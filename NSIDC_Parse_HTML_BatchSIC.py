@@ -93,10 +93,12 @@ def BatchJob(Files, cookie_jar, year, url):
 def main(year):
     # The user credentials that will be used to authenticate access to the data
     username = "akpetty"
-    password = "Ruardean1"
+    password = ""
 
     # The FULL url of the directory which contains the files you would like to bulk download
-    url = "https://daacdata.apps.nsidc.org/pub/DATASETS/nsidc0079_gsfc_bootstrap_seaice_v3/final-gsfc/north/daily/"+str(year)+'/' # Example URL
+    #url = "https://daacdata.apps.nsidc.org/pub/DATASETS/nsidc0079_gsfc_bootstrap_seaice_v3/final-gsfc/north/daily/"+str(year)+'/' # Example URL
+
+    url = "https://daacdata.apps.nsidc.org/pub/DATASETS/nsidc0116_icemotion_vectors_v3/data/north/grid/"+str(year)+"/"
 
     # Create a password manager to deal with the 401 reponse that is returned from
     # Earthdata Login
@@ -160,7 +162,7 @@ def main(year):
 
 #-- run main program
 if __name__ == '__main__':
-    for y in xrange(2000, 2016, 1):
+    for y in xrange(2016, 2017+1, 1):
         print y
         main(y)
 

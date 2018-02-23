@@ -92,7 +92,7 @@ def BatchJob(Files, cookie_jar, year, url):
 def main(year):
     # The user credentials that will be used to authenticate access to the data
     username = "akpetty"
-    password = "Ruardean1"
+    password = ""
 
     # The FULL url of the directory which contains the files you would like to bulk download
     url = "https://daacdata.apps.nsidc.org/pub/DATASETS/nsidc0116_icemotion_vectors_v3/data/north/grid/"+str(year)+"/" # Example URL
